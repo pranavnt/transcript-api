@@ -3,7 +3,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 app = Flask(__name__)
 
-@app.route('/<vid>')
+@app.route('/api/<vid>')
 def ts(vid):
   transcriptArr = YouTubeTranscriptApi.get_transcript(vid)
   transcript = ""
